@@ -8,12 +8,9 @@ import Image from "next/image";
 const heroContent = {
   heroImage: "/assets/img/hero/dark.jpg",
   heroMobileImage: heroImgMobile,
-  heroTitleName: "steve milner",
-  heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
-  around me.`,
+  heroTitleName: "Kyle Wade",
+  heroDesignation: "Software Engineer",
+  heroDescriptions: `I'm a full-stack web and app developer passionate about making great products for people. I'm currently pursuing my Masters in Machine Learning and Data Science at the University of California, San Diego.`,
   heroBtn: "more about me",
 };
 

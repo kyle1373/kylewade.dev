@@ -7,6 +7,7 @@ import Skills from "./Skills";
 import cv from "../../../public/assets/img/kyle_wade_resume.pdf";
 import heroImgMobile from "../../../public/assets/img/hero/img-mobile.jpg";
 import Image from "next/image";
+import Link from "next/link"
 
 const index = () => {
   return (
@@ -39,10 +40,10 @@ const index = () => {
               {/* End personal info */}
 
               <div className="col-12 mt-1">
-                <a className="button" href="/resume">
+                <Link className="button" href="/resume">
                   <span className="button-text">Download CV</span>
                   <span className="button-icon fa fa-download"></span>
-                </a>
+                </Link>
               </div>
               {/* End download button */}
             </div>

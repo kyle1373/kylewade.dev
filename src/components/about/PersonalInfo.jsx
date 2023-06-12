@@ -20,7 +20,7 @@ const PersonalInfo = () => {
           <span
             className={`value d-block d-sm-inline-block d-lg-block d-xl-inline-block ${val.hasColor}`}
           >
-            {val.link ? <a href={val.link} target="_blank">{val.metaInfo}</a> : val.metaInfo}
+            {val.link ? <a href={val.link} target="_blank" rel="noopener noreferrer nofollow">{val.metaInfo}</a> : val.metaInfo}
           </span>
         </li>
       ))}

@@ -41,8 +41,7 @@ const experienceContent = [
     year: "2021",
     position: "Software Engineer Intern",
     companyName: "Navlabs",
-    details: `Developed a C++ executable that scans binary code from GPS simulators and converts it into data readable to other systems. 
-    Resulted in 200% increased productivity from company simulators. Executable currently used by company to parse GPS data.`,
+    details: `Developed a C++ program that scans binary code from GPS simulators and converts it into data readable to other systems.`,
   },
   {
     year: "2017 - 2020",

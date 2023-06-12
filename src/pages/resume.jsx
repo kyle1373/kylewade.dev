@@ -1,21 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export default function resume() {
 
-  const pdfURL = "public/assets/img/kyle_wade_resume.pdf"
+  const viewer = useRef(null)
+
+  useEffect(() => {
+    import('@pdftron/webviewer').then(() => {
+      WebViewer(
+        {
+          path: '/lib',
+          initialDoc: '/assets/img/kyle_wade_resume.pdf',
+        },
+        viewer.current,
+      ).then((instance) => {
+        const { docViewer } = instance;
+      })
+    })
+  }, [])
 
   return (
-    <div>
-      <embed
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-        type="application/pdf"
-        src={pdfURL}
-      />
-    </div>
-  );
+    <div ref={viewer} style={{height: "100vh"}}></div>
+  )
 }

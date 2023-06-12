@@ -5,7 +5,7 @@ import Experience from "./Experience";
 import PersonalInfo from "./PersonalInfo";
 import Skills from "./Skills";
 import cv from "../../../public/assets/img/kyle_wade_resume.pdf";
-import heroImgMobile from "../../../public/assets/img/hero/img-mobile.jpg";
+import heroImgMobile from "../../../public/assets/img/hero/kyle-mobile.jpg";
 import Image from "next/image";
 import Link from "next/link"
 

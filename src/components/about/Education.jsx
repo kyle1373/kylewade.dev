@@ -2,25 +2,22 @@ import React from "react";
 
 const educationContent = [
   {
-    year: "2015",
-    degree: "ENGINEERING DEGREE",
-    institute: "OXFORD UNIVERSITY",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
+    year: "2025",
+    degree: "M.S. IN MACHINE LEARNING AND DATA SCIENCE",
+    institute: "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+    details: ``,
   },
   {
-    year: "2012",
-    degree: "MASTER DEGREE",
-    institute: "KIEV UNIVERSITY",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
+    year: "2023",
+    degree: "B.S. IN COMPUTER ENGINEERING",
+    institute: "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+    details: `3.8 GPA. Member of Honor Societies Tau Beta Pi (TBP) and IEEE - Eta Kappa Nu (HKN).`,
   },
   {
-    year: "2009",
-    degree: "BACHELOR DEGREE ",
-    institute: "TUNIS HIGH SCHOOL",
-    details: `Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur
-        elit, sed do eiusmod tempor duntt`,
+    year: "2020",
+    degree: "Diploma",
+    institute: "DANA HILLS HIGH SCHOOL",
+    details: `4.0 GPA.`,
   },
 ];
 

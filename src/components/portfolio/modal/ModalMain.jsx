@@ -16,35 +16,15 @@ const ModalMain = ({ modalId, setGetModal }) => {
     );
   } else if (modalId === 2) {
     return (
-      <ModalTwo modalId={modalId} setGetModal={setGetModal}/>
+      <ModalOne modalId={modalId} setGetModal={setGetModal} />
     );
   } else if (modalId === 3) {
     return (
-      <ModalThree modalId={modalId} setGetModal={setGetModal}/>
+      <ModalOne modalId={modalId} setGetModal={setGetModal} />
     );
   } else if (modalId === 4) {
     return (
-      <ModalFour modalId={modalId} setGetModal={setGetModal}/>
-    );
-  } else if (modalId === 5) {
-    return (
-      <ModalFive modalId={modalId} setGetModal={setGetModal}/>
-    );
-  } else if (modalId === 6) {
-    return (
-      <ModalSix modalId={modalId} setGetModal={setGetModal}/>
-    );
-  } else if (modalId === 7) {
-    return (
-      <ModalSeven modalId={modalId} setGetModal={setGetModal}/>
-    );
-  } else if (modalId === 8) {
-    return (
-      <ModalEight modalId={modalId} setGetModal={setGetModal}/>
-    );
-  } else if (modalId === 9) {
-    return (
-      <ModalNine modalId={modalId} setGetModal={setGetModal}/>
+      <ModalOne modalId={modalId} setGetModal={setGetModal} />
     );
   }
 };

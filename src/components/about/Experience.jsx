@@ -25,7 +25,7 @@ const experienceContent = [
     year: "2021 - 2023",
     position: "Software Developer Lead",
     companyName: "IEEE - Eta Kappa Nu (Engineering Honors Society at UCSD)",
-    details: `Led a team of 6 developers on the creation of a member portal used by 400+ HKN honor society members at UC San Diego.
+    details: `Led a team of 6 developers on the creation of a member portal used by 2000+ HKN honor society members at UC San Diego.
     Developed a stateful React.js frontend displaying a role‑specific website where officers can create events for members on a calendar.
     Designed a scalable PostgreSQL relational database holding event and member data while utilizing REST API for entity endpoints.
     Created an authentication flow using Firebase to store session tokens on the client, enabling exclusive member sign‑in.`,

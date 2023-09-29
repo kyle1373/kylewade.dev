@@ -2,25 +2,25 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "2023",
-    position: "Software Engineer Intern",
-    companyName: "Qualcomm",
-    details: `Currently working in the 5G Layer 2 Data Level Software Team to make 5G software enhancements, tools, and machine learning use cases.`,
-  },  
-  {
-    year: "2023",
-    position: "App Developer",
-    companyName: "UC San Diego Mobile Systems Design Lab",
-    details: `Created a React Native mobile application that allows patients to perform physical therapy exercises at home while given real-time feedback using skeletonized models.
-    Delivered first iteration of the app to 10+ physical therapists and 80+ patients.`,
-  },  
-  {
-    year: "2021 - 2023",
+    year: "Current",
     position: "Instructional Assistant",
     companyName: "UC San Diego Computer Science and Engineering Department",
     details: `Helped 1400+ students by grading exams, giving constructive feedback with programming assignments, and holding tutoring sessions outside of normal class time in a Data Structures and Algorithms class, teaching binary search trees, linked lists, stacks, heaps, priority queues, and hashmaps. 
     Received 99% student approval rating across 200+ one‑on‑one sessions.`,
+  }, 
+  {
+    year: "2023",
+    position: "App Developer",
+    companyName: "UC San Diego Mobile Systems Design Lab",
+    details: `Designed and developed a mobile app using Figma, TypeScript, and React Native that allows patients to perform physical therapy exercises at home
+    while being given real‑time feedback using skeletonized models displayed on the phone. Introduced first iteration to 5+ physical therapists and 50+ patients, with 100% customer acquisition and more iterations in progress.`,
   },  
+  {
+    year: "2023",
+    position: "Software Engineer Intern",
+    companyName: "Qualcomm",
+    details: `Optimized the processing of IP log packets in the 5G data layer for upcoming computer chipsets using machine learning and embedded C. Transitioned the team from choosing chipset memory thresholds from trial‑and‑error to data‑driven predictions.`,
+  },   
   {
     year: "2021 - 2023",
     position: "Software Developer Lead",

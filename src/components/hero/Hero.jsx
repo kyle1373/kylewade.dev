@@ -10,7 +10,7 @@ const heroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "Kyle Wade",
   heroDesignation: "Software Engineer",
-  heroDescriptions: `I'm a full-stack web and app developer passionate about making great products for people. I'm currently pursuing my Masters in Machine Learning and Data Science at the University of California, San Diego.`,
+  heroDescriptions: `I'm a software engineer passionate about making great products for people. I'm currently pursuing my Masters in Machine Learning and Data Science at the University of California, San Diego.`,
   heroBtn: "more about me",
 };
 

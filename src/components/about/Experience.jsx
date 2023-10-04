@@ -10,22 +10,22 @@ const experienceContent = [
   }, 
   {
     year: "2023",
-    position: "App Developer",
-    companyName: "UC San Diego Mobile Systems Design Lab",
-    details: `Designed and developed a mobile app using Figma, TypeScript, and React Native that allows patients to perform physical therapy exercises at home
-    while being given real‑time feedback using skeletonized models displayed on the phone. Introduced first iteration to 5+ physical therapists and 50+ patients, with 100% customer acquisition and more iterations in progress.`,
-  },  
-  {
-    year: "2023",
     position: "Software Engineer Intern",
-    companyName: "Qualcomm",
-    details: `Optimized the processing of IP log packets in the 5G data layer for upcoming computer chipsets using machine learning and embedded C. Transitioned the team from choosing chipset memory thresholds from trial‑and‑error to data‑driven predictions.`,
-  },   
+    companyName: "VirtualPT",
+    details: `Designed and developed a mobile app using Figma, TypeScript, and React Native that allows patients to perform physical therapy exercises at home
+    while being given real‑time feedback using skeletonized models displayed on the phone. Introduced first iteration to 5+ physical therapists and 50+ patients.`,
+  },  
+  // {
+  //   year: "2023",
+  //   position: "Software Engineer Intern",
+  //   companyName: "Qualcomm",
+  //   details: `Optimized the processing of IP log packets in the 5G data layer for upcoming computer chipsets using machine learning and embedded C. Transitioned the team from choosing chipset memory thresholds from trial‑and‑error to data‑driven predictions.`,
+  // },   
   {
     year: "2021 - 2023",
     position: "Software Developer Lead",
     companyName: "IEEE - Eta Kappa Nu (Engineering Honors Society at UCSD)",
-    details: `Led a team of 6 developers on the creation of a member portal used by 2000+ HKN honor society members at UC San Diego.
+    details: `Led a team of 6 developers on the creation of a member portal used by 450+ HKN honor society members at UC San Diego.
     Developed a stateful React.js frontend displaying a role‑specific website where officers can create events for members on a calendar.
     Designed a scalable PostgreSQL relational database holding event and member data while utilizing REST API for entity endpoints.
     Created an authentication flow using Firebase to store session tokens on the client, enabling exclusive member sign‑in.`,
@@ -34,7 +34,7 @@ const experienceContent = [
     year: "2022",
     position: "Software Engineer Intern",
     companyName: "Qualcomm",
-    details: `Worked with 8 customers to develop 2 tools in C# and XAML which fully implement and demonstrate 5 new Qualcomm Snapdragon features. 
+    details: `Worked with 8 customers to develop 2 tools in React.js and C++ which fully implement and demonstrate 5 new Qualcomm Snapdragon features. 
     Enhanced CPU thermal stress‑testing by optimizing multithreading and automating tasks through scripting, increasing product efficiency by 50%.`,
   },
   {

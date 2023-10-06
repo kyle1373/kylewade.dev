@@ -3,7 +3,7 @@ import React from "react";
 const educationContent = [
   {
     year: "2025",
-    degree: "M.S. IN MACHINE LEARNING AND DATA SCIENCE",
+    degree: "M.S. IN COMPUTER ENGINEERING (MACHINE LEARNING AND DATA SCIENCE)",
     institute: "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
     details: ``,
   },

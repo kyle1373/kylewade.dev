@@ -3,24 +3,23 @@ import React from "react";
 const experienceContent = [
   {
     year: "Current",
-    position: "Instructional Assistant",
-    companyName: "UC San Diego Computer Science and Engineering Department",
+    position: "Teaching Assistant",
+    companyName: "UCSD Computer Science and Engineering Department",
     details: `Helped 1400+ students by grading exams, giving constructive feedback with programming assignments, and holding tutoring sessions outside of normal class time in a Data Structures and Algorithms class, teaching binary search trees, linked lists, stacks, heaps, priority queues, and hashmaps. 
     Received 99% student approval rating across 200+ one‑on‑one sessions.`,
   }, 
   {
     year: "2023",
-    position: "Software Engineer Intern",
-    companyName: "VirtualPT",
-    details: `Designed and developed a mobile app using Figma, TypeScript, and React Native that allows patients to perform physical therapy exercises at home
-    while being given real‑time feedback using skeletonized models displayed on the phone. Introduced first iteration to 5+ physical therapists and 50+ patients.`,
+    position: "Software Developer",
+    companyName: "UCSD Mobile Systems Design Lab",
+    details: `Developed a React.js website and a React Native mobile app using Typescript that allows patients to perform physical therapy exercises at home while being given real‑time feedback using skeletonized models displayed on the phone through the user’s camera. Implemented a robust Express.js backend, optimizing RESTful API endpoints for performance, security, and scalability connected with a SQL database.`,
   },  
-  // {
-  //   year: "2023",
-  //   position: "Software Engineer Intern",
-  //   companyName: "Qualcomm",
-  //   details: `Optimized the processing of IP log packets in the 5G data layer for upcoming computer chipsets using machine learning and embedded C. Transitioned the team from choosing chipset memory thresholds from trial‑and‑error to data‑driven predictions.`,
-  // },   
+  {
+    year: "2023",
+    position: "Software Engineer Intern",
+    companyName: "Qualcomm",
+    details: `Optimized the processing of IP log packets in the 5G data layer using C++ for upcoming computer chipsets. Leveraged AWS SageMaker and AWS QuickSight to transition the company to choose memory thresholds from trial‑and‑error to data‑driven analysis. Optimized thread synchronization through semaphores and locks to prevent race conditions, deadlock, and starvation across multiple threads.`,
+  },   
   {
     year: "2021 - 2023",
     position: "Software Developer Lead",

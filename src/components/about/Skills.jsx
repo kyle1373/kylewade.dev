@@ -20,47 +20,40 @@ const skillsContent = [
   {
     skillClass: LEVEL4.percent,
     skillPercent: LEVEL4.text,
+    skillName: "Typescript / Javascript",
+  },
+  { skillClass: LEVEL4.percent, skillPercent: LEVEL4.text, skillName: "REACT" },
+  {
+    skillClass: LEVEL4.percent,
+    skillPercent: LEVEL4.text,
     skillName: "REACT NATIVE",
   },
   {
     skillClass: LEVEL4.percent,
     skillPercent: LEVEL4.text,
-    skillName: "Typescript / Javascript",
+    skillName: "DOCKER",
   },
-  { skillClass: LEVEL4.percent, skillPercent: LEVEL4.text, skillName: "REACT" },
+  {
+    skillClass: LEVEL4.percent,
+    skillPercent: LEVEL4.text,
+    skillName: "KUBERNETES",
+  },
+  {
+    skillClass: LEVEL4.percent,
+    skillPercent: LEVEL4.text,
+    skillName: "Golang",
+  },
+  { skillClass: LEVEL4.percent, skillPercent: LEVEL4.text, skillName: "SQL" },
   { skillClass: LEVEL4.percent, skillPercent: LEVEL4.text, skillName: "JAVA" },
   { skillClass: LEVEL4.percent, skillPercent: LEVEL4.text, skillName: "HTML" },
   { skillClass: LEVEL4.percent, skillPercent: LEVEL4.text, skillName: "CSS" },
-  {
-    skillClass: LEVEL3.percent,
-    skillPercent: LEVEL3.text,
-    skillName: "CYPHER",
-  },
   { skillClass: LEVEL3.percent, skillPercent: LEVEL3.text, skillName: "C++" },
   {
     skillClass: LEVEL3.percent,
     skillPercent: LEVEL3.text,
     skillName: "PYTHON",
   },
-  {
-    skillClass: LEVEL3.percent,
-    skillPercent: LEVEL3.text,
-    skillName: "DOCKER",
-  },
-  { skillClass: LEVEL3.percent, skillPercent: LEVEL3.text, skillName: "SQL" },
-  { skillClass: LEVEL3.percent, skillPercent: LEVEL3.text, skillName: "C" },
-  { skillClass: LEVEL2.percent, skillPercent: LEVEL2.text, skillName: "C#" },
-  {
-    skillClass: LEVEL2.percent,
-    skillPercent: LEVEL2.text,
-    skillName: "Golang",
-  },
-  {
-    skillClass: LEVEL2.percent,
-    skillPercent: LEVEL2.text,
-    skillName: "Flutter",
-  },
-  { skillClass: LEVEL2.percent, skillPercent: LEVEL2.text, skillName: "Dart" },
+  { skillClass: LEVEL2.percent, skillPercent: LEVEL2.text, skillName: "C# / .NET" },
 ];
 
 const Skills = () => {

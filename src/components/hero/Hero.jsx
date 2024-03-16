@@ -10,7 +10,7 @@ const heroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "Kyle Wade",
   heroDesignation: "Software Engineer",
-  heroDescriptions: `I'm a software engineer passionate about making great products for people. I'm currently pursuing my Masters in Computer Engineering at the University of California, San Diego.`,
+  heroDescriptions: `Love to ski, hike, play the piano, raise dogs, and hack away at a computer screen`,
   heroBtn: "more about me",
 };
 

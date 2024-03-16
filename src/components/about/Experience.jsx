@@ -5,7 +5,7 @@ const experienceContent = [
     year: "2024",
     position: "Software Engineer Intern",
     companyName: "Tesla",
-    details: `Made improvements on Tesla’s service engineering pipeline by using React.js, Redux, Golang, SQL, Docker, and Kubernetes in an agile environment. Optimized REST API endpoints and SQL database queries which resulted in 60% faster page load on Tesla’s centralized diagnostics software, Toolbox. Designed, developed, and implemented 30+ new features and performed 40+ code reviews in order to enforce high‑quality coding standards. Decoupled 1 large, centralized service into 3 microservices using Docker containers controlled by Kubernetes, improving Tesla’s backend efficiency.`,
+    details: `Made improvements on Tesla’s service engineering pipeline by using React.js, Redux, Golang, SQL, Docker, and Kubernetes in an agile environment. Optimized REST API endpoints and SQL database queries which resulted in 60% faster page load on Tesla’s centralized diagnostics software, Toolbox. Designed, developed, and implemented 15+ new features and performed 20+ code reviews in order to enforce high‑quality coding standards. Decoupled 1 large, centralized service into 3 microservices using Docker containers controlled by Kubernetes, improving Tesla’s backend efficiency.`,
   },
   {
     year: "2023",

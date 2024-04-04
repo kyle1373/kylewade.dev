@@ -1,10 +1,8 @@
 import React from "react";
 
 const personalInfoContent = [
-  { meta: "first name", metaInfo: "Kyle", hasColor: "" },
-  { meta: "last name", metaInfo: "Wade", hasColor: "" },
+  { meta: "name", metaInfo: "Kyle Wade", hasColor: "" },
   // { meta: "Work Availability", metaInfo: "Op", hasColor: "green" },
-  { meta: "phone", metaInfo: "+19498877545", hasColor: "" },
   { meta: "Email", metaInfo: "kwade@ucsd.edu", hasColor: "", link: "mailto:kwade@ucsd.edu" },
   { meta: "Discord", metaInfo: "kylewade", hasColor: "" },
   { meta: "GitHub", metaInfo: "kyle1373", hasColor: "", link: "https://github.com/kyle1373/"},

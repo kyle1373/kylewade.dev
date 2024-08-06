@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaNewspaper } from "react-icons/fa6";
 import {
@@ -35,10 +34,7 @@ export default function Home() {
             >
               <FaNewspaper size={30} />
             </Link>
-            <Link
-              href={LINKS.Email}
-              className="hover:text-gray-200 text-white"
-            >
+            <Link href={LINKS.Email} className="hover:text-gray-200 text-white">
               <TbMailFilled size={30} />
             </Link>
           </div>
@@ -54,14 +50,14 @@ export default function Home() {
         />
       </div>
 
-      <div className="max-w-3xl text-center w-full mt-20">
+      <div className="max-w-3xl w-full text-left font-mono">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger className="font-mono font-bold text-3xl">
+            <AccordionTrigger className="font-mono font-bold text-xl sm:text-3xl">
               About Me
             </AccordionTrigger>
             <AccordionContent>
-              <p className="text-left text-lg">
+              <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning
                 researcher and software engineer. I love hiking, skiing, playing
                 the piano, raising dogs, competing in chess, and more. I do a
@@ -86,12 +82,12 @@ export default function Home() {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className="font-mono font-bold text-3xl">
+            <AccordionTrigger className="font-mono font-bold text-xl sm:text-3xl">
               Skills
             </AccordionTrigger>
             <AccordionContent>
               <div className="text-left text-lg">
-                <h3 className="font-bold mt-4">Languages</h3>
+                <h3 className="font-bold">Languages</h3>
                 <div className="flex flex-wrap gap-2">
                   <img
                     src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"
@@ -266,6 +262,13 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <h1 className="font-black mt-4 sm:text-3xl text-lg">Projects</h1>
+        <div className="mt-10">
+          <h2>
+            Under construction :)
+          </h2>
+        </div>
       </div>
     </main>
   );

@@ -254,7 +254,7 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <h1 className="font-black mt-4 sm:text-3xl text-lg">Projects</h1>
+        <h1 className="font-mono font-bold text-xl sm:text-3xl mt-4">Projects</h1>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
           <Card
             title="Archiverse"

@@ -339,7 +339,7 @@ export default function Home() {
           <Card
             title="ForestShield"
             subtitle="QHacks 2022 3rd Place Winner"
-            description="A machine learning architecture that predicts forest fire risks based on environmental data and displays it on a heatmap for first responders."
+            description="A machine learning architecture that predicts forest fire risk based on environmental data and displays the data on a heatmap for first responders."
             mediaItems={[
               "/screenshots/forestshield1.png",
               "/screenshots/forestshield2.png",

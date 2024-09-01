@@ -9,6 +9,7 @@ import {
 import { LINKS } from "@/constants/constants";
 import Link from "next/link";
 import { TbMailFilled } from "react-icons/tb";
+import Card from "@components/ProjectCard";
 
 export default function Home() {
   return (
@@ -61,8 +62,8 @@ export default function Home() {
                 I'm <span className="font-bold">Kyle</span>, a machine learning
                 researcher and software engineer. I love hiking, skiing, playing
                 the piano, raising dogs, competing in chess, and more. I do a
-                ton of fullstack development. If you're interested to see what I
-                do (or hire me), check out my{" "}
+                ton of fullstack development and machine learning. If you're
+                interested in seeing what I do (or hire me), check out my{" "}
                 <Link
                   href={LINKS.Github}
                   className="underline text-blue-400 hover:text-blue-300"
@@ -262,12 +263,73 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-
         <h1 className="font-black mt-4 sm:text-3xl text-lg">Projects</h1>
-        <div className="mt-10">
-          <h2>
-            Under construction :)
-          </h2>
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <Card
+            title="Archiverse"
+            subtitle="60,000+ visits / month"
+            description="An innovative platform that allows users to explore and catalog various architecture designs."
+            websiteLink="https://archiverse.com"
+            githubLink="https://github.com/username/archiverse"
+            logoImage="/archiverse.png"
+            screenshotImages={[
+              "/screenshots/archiverse1.png",
+              "/screenshots/archiverse2.png",
+            ]}
+          />
+
+          <Card
+            title="Audio Synthesizer"
+            description="A web-based synthesizer that allows users to create and manipulate sound waves in real-time."
+            githubLink="https://github.com/username/audio-synthesizer"
+          />
+
+          <Card
+            title="osu! capital"
+            subtitle="11,000+ users"
+            description="A financial management tool designed for gamers to manage in-game currency and resources."
+            numberOfUsers="11,000+"
+            logoImage="/osucapital.png"
+          />
+
+          <Card
+            title="oncehuman.market"
+            logoImage="/oncehumanmarket.png"
+            description="An online marketplace for trading and selling rare digital collectibles."
+          />
+
+          <Card
+            title="MarioKartCentral"
+            subtitle="32,000+ users"
+            logoImage="/mariokartcentral.png"
+            description="A central hub for Mario Kart players to share tips, strategies, and organize tournaments."
+            numberOfUsers="32,000+"
+          />
+
+          <Card
+            title="ForestShield"
+            description="A machine learning model that predicts forest fire risks based on environmental data."
+          />
+
+          <Card
+            title="Where2Be"
+            subtitle="2,000+ users"
+            logoImage="/where2be.png"
+            description="A social networking app for finding the best places to hang out based on your interests."
+            numberOfUsers="2,000+"
+          />
+
+          <Card
+            title="HKN Portal"
+            logoImage="/hkn.png"
+            description="A portal for managing and organizing HKN events and member activities."
+          />
+
+          <Card
+            title="Hard Hack"
+            logoImage="/hardhack.png"
+            description="An annual hackathon event focused on solving real-world hardware challenges."
+          />
         </div>
       </div>
     </main>

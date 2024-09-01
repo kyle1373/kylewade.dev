@@ -20,22 +20,33 @@ export default function Home() {
             <Link
               href={LINKS.Github}
               className="hover:text-gray-200 text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub size={30} />
             </Link>
             <Link
               href={LINKS.Linkedin}
               className="hover:text-gray-200 text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin size={30} />
             </Link>
             <Link
               href={LINKS.Resume}
               className="hover:text-gray-200 text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaNewspaper size={30} />
             </Link>
-            <Link href={LINKS.Email} className="hover:text-gray-200 text-white">
+            <Link
+              href={LINKS.Email}
+              className="hover:text-gray-200 text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <TbMailFilled size={30} />
             </Link>
           </div>
@@ -67,6 +78,8 @@ export default function Home() {
                 <Link
                   href={LINKS.Github}
                   className="underline text-blue-400 hover:text-blue-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Github
                 </Link>{" "}
@@ -74,6 +87,8 @@ export default function Home() {
                 <Link
                   href={LINKS.Resume}
                   className="underline text-blue-400 hover:text-blue-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   resume
                 </Link>

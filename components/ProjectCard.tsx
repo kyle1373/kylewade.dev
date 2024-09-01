@@ -154,12 +154,19 @@ export default function Card({
           <Link
             href={websiteLink}
             className="text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaExternalLinkAlt size={20} />
           </Link>
         )}
         {githubLink && (
-          <Link href={githubLink} className="text-blue-400 hover:text-blue-300">
+          <Link
+            href={githubLink}
+            className="text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub size={20} />
           </Link>
         )}

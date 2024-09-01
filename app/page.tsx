@@ -41,12 +41,7 @@ export default function Home() {
             >
               <FaNewspaper size={30} />
             </Link>
-            <Link
-              href={LINKS.Email}
-              className="hover:text-gray-200 text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={LINKS.Email} className="hover:text-gray-200 text-white">
               <TbMailFilled size={30} />
             </Link>
           </div>
@@ -72,8 +67,8 @@ export default function Home() {
               <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning
                 researcher and software engineer. I love hiking, skiing, playing
-                the piano, raising dogs, competing in chess, and more. I also do a
-                ton of fullstack development.
+                the piano, raising dogs, competing in chess, and more. I also do
+                a ton of fullstack development.
               </p>
             </AccordionContent>
           </AccordionItem>

@@ -268,11 +268,11 @@ export default function Home() {
           <Card
             title="Archiverse"
             subtitle="60,000+ visits / month"
-            description="An innovative platform that allows users to explore and catalog various architecture designs."
-            websiteLink="https://archiverse.com"
-            githubLink="https://github.com/username/archiverse"
+            description="Archiverse is a comprehensive archive of Miiverse, a social media platform for the Nintendo Wii U and 3DS which ran from November 18, 2012 until November 8, 2017. This archive stores millions of archived Miiverse users, posts, drawings, comments, and more, totaling over 17TB of data."
+            websiteLink="https://archiverse.app"
+            githubLink="https://github.com/kyle1373/archiverse"
             logoImage="/archiverse.png"
-            screenshotImages={[
+            mediaItems={[
               "/screenshots/archiverse1.png",
               "/screenshots/archiverse2.png",
             ]}
@@ -280,8 +280,9 @@ export default function Home() {
 
           <Card
             title="Audio Synthesizer"
-            description="A web-based synthesizer that allows users to create and manipulate sound waves in real-time."
-            githubLink="https://github.com/username/audio-synthesizer"
+            description="n audio synthesizer project written entirely in Java displaying visualizations of wave amplification and attenuation while showing Fourier Transform component representation."
+            githubLink="https://github.com/kyle1373/AudioSynthesizer"
+            mediaItems={["/screenshots/audiosynthesizer"]}
           />
 
           <Card
@@ -296,6 +297,8 @@ export default function Home() {
             title="oncehuman.market"
             logoImage="/oncehumanmarket.png"
             description="An online marketplace for trading and selling rare digital collectibles."
+            mediaItems={["/screenshots/oncehumanmarket1.png", "/screenshots/oncehumanmarket2.png", "/screenshots/oncehumanmarket3.png"]}
+
           />
 
           <Card
@@ -317,6 +320,10 @@ export default function Home() {
             logoImage="/where2be.png"
             description="A social networking app for finding the best places to hang out based on your interests."
             numberOfUsers="2,000+"
+            mediaItems={[
+              "/screenshots/where2be.png",
+              "/videos/where2be.mp4",
+            ]}
           />
 
           <Card

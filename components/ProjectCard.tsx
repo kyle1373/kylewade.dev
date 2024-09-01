@@ -9,6 +9,7 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaTimes,
+  FaPlay,
 } from "react-icons/fa";
 
 export default function Card({
@@ -18,35 +19,102 @@ export default function Card({
   websiteLink,
   githubLink,
   logoImage,
-  screenshotImages,
+  mediaItems, // This will now handle both images and videos
   numberOfUsers,
+}: {
+  title;
+  subtitle?;
+  description;
+  websiteLink?;
+  githubLink?;
+  logoImage?;
+  mediaItems?; // This will now handle both images and videos
+  numberOfUsers?;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
 
   const openModal = (index) => {
-    setCurrentImageIndex(index);
+    setCurrentMediaIndex(index);
     setIsModalOpen(true);
   };
 
   const closeModal = () => setIsModalOpen(false);
 
-  const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? screenshotImages.length - 1 : prevIndex - 1
+  const goToPreviousMedia = () => {
+    setCurrentMediaIndex((prevIndex) =>
+      prevIndex === 0 ? mediaItems.length - 1 : prevIndex - 1
     );
   };
 
-  const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === screenshotImages.length - 1 ? 0 : prevIndex + 1
+  const goToNextMedia = () => {
+    setCurrentMediaIndex((prevIndex) =>
+      prevIndex === mediaItems.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  // Function to close modal if clicked outside the image
+  // Function to close modal if clicked outside the media
   const handleClickOutside = (event) => {
     if (event.target.id === "modal-background") {
       closeModal();
+    }
+  };
+
+  const renderMedia = (media) => {
+    const isVideo = media.endsWith(".mp4") || media.endsWith(".webm");
+    if (isVideo) {
+      return (
+        <video controls autoPlay className="w-full h-auto rounded-lg">
+          <source src={media} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else {
+      return (
+        <img
+          src={media}
+          alt={`Media ${currentMediaIndex + 1}`}
+          className="w-full h-auto rounded-lg"
+        />
+      );
+    }
+  };
+
+  const getThumbnail = (media) => {
+    const isVideo = media.endsWith(".mp4") || media.endsWith(".webm");
+    if (isVideo) {
+      // Generate the thumbnail path based on the video URL
+      const thumbnailPath = media
+        .replace("/videos/", "/thumbnails/")
+        .replace(".mp4", ".png")
+        .replace(".webm", ".png");
+      return (
+        <div className="relative h-24 w-24 cursor-pointer">
+          <img
+            src={thumbnailPath}
+            alt={`Thumbnail for ${title}`}
+            className="h-full w-full object-cover rounded-lg"
+            onClick={() => openModal(currentMediaIndex)}
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-gray-800 bg-opacity-50 p-2 rounded-full">
+              <FaPlay
+                size={30}
+                className="text-white opacity-80 ml-1"
+              />
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <img
+          src={media}
+          alt={`${title} media ${currentMediaIndex + 1}`}
+          className="h-24 w-24 object-cover rounded-lg cursor-pointer"
+          onClick={() => openModal(currentMediaIndex)}
+        />
+      );
     }
   };
 
@@ -71,16 +139,12 @@ export default function Card({
       {numberOfUsers && (
         <p className="text-sm text-gray-500 mt-2">Users: {numberOfUsers}</p>
       )}
-      {screenshotImages && (
+      {mediaItems && (
         <div className="flex space-x-4 mt-4">
-          {screenshotImages.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`${title} screenshot ${index + 1}`}
-              className="h-24 w-24 object-cover rounded-lg cursor-pointer"
-              onClick={() => openModal(index)}
-            />
+          {mediaItems.map((media, index) => (
+            <div key={index} onClick={() => openModal(index)}>
+              {getThumbnail(media)}
+            </div>
           ))}
         </div>
       )}
@@ -108,13 +172,12 @@ export default function Card({
           onClick={handleClickOutside}
         >
           <div className="relative w-11/12 sm:w-3/4 lg:w-1/2">
-            <img
-              src={screenshotImages[currentImageIndex]}
-              alt={`Screenshot ${currentImageIndex + 1}`}
-              className="w-full h-auto rounded-lg"
-            />
+            {renderMedia(mediaItems[currentMediaIndex])}
             <div className="absolute top-4 right-4 z-40 ">
-              <button className=" text-white p-1 rounded-full bg-gray-800 bg-opacity-50" onClick={closeModal}>
+              <button
+                className=" text-white p-1 rounded-full bg-gray-800 bg-opacity-50"
+                onClick={closeModal}
+              >
                 <FaTimes size={24} />
               </button>
             </div>
@@ -122,7 +185,7 @@ export default function Card({
             <div className="absolute inset-y-0 left-4 flex items-center justify-center">
               <button
                 className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
-                onClick={goToPreviousImage}
+                onClick={goToPreviousMedia}
               >
                 <FaChevronLeft size={30} />
               </button>
@@ -130,7 +193,7 @@ export default function Card({
             <div className="absolute inset-y-0 right-4 flex items-center justify-center">
               <button
                 className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
-                onClick={goToNextImage}
+                onClick={goToNextMedia}
               >
                 <FaChevronRight size={30} />
               </button>

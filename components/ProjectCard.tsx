@@ -64,7 +64,11 @@ export default function Card({
     const isVideo = media.endsWith(".mp4") || media.endsWith(".webm");
     if (isVideo) {
       return (
-        <video controls autoPlay className="w-full h-auto rounded-lg">
+        <video
+          controls
+          autoPlay
+          className="w-full h-auto max-h-[90vh] rounded-lg"
+        >
           <source src={media} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -74,7 +78,7 @@ export default function Card({
         <img
           src={media}
           alt={`Media ${currentMediaIndex + 1}`}
-          className="w-full h-auto rounded-lg"
+          className="w-full h-auto max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
         />
       );
     }
@@ -98,10 +102,7 @@ export default function Card({
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-gray-800 bg-opacity-50 p-2 rounded-full">
-              <FaPlay
-                size={30}
-                className="text-white opacity-80 ml-1"
-              />
+              <FaPlay size={30} className="text-white opacity-80 ml-1" />
             </div>
           </div>
         </div>

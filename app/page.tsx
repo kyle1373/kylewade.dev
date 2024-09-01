@@ -267,75 +267,104 @@ export default function Home() {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
           <Card
             title="Archiverse"
-            subtitle="60,000+ visits / month"
-            description="Archiverse is a comprehensive archive of Miiverse, a social media platform for the Nintendo Wii U and 3DS which ran from November 18, 2012 until November 8, 2017. This archive stores millions of archived Miiverse users, posts, drawings, comments, and more, totaling over 17TB of data."
+            subtitle="600,000+ visits / month"
+            description="A comprehensive archive of Miiverse, a social media platform for the Nintendo Wii U and 3DS which ran from November 18, 2012 until November 8, 2017. This archive stores millions of archived Miiverse users, posts, drawings, comments, and more, totaling over 17TB of data."
             websiteLink="https://archiverse.app"
             githubLink="https://github.com/kyle1373/archiverse"
             logoImage="/archiverse.png"
             mediaItems={[
               "/screenshots/archiverse1.png",
               "/screenshots/archiverse2.png",
+              "/screenshots/archiverse3.png",
             ]}
-          />
-
-          <Card
-            title="Audio Synthesizer"
-            description="n audio synthesizer project written entirely in Java displaying visualizations of wave amplification and attenuation while showing Fourier Transform component representation."
-            githubLink="https://github.com/kyle1373/AudioSynthesizer"
-            mediaItems={["/screenshots/audiosynthesizer"]}
           />
 
           <Card
             title="osu! capital"
             subtitle="11,000+ users"
-            description="A financial management tool designed for gamers to manage in-game currency and resources."
-            numberOfUsers="11,000+"
+            description="A stock market where traders invest paper currency into osu! player stocks. Everyone starts off with 10,000 coins, and traders rank up by making good bets on who they think is underrated. When a player's osu! performance goes up, so does their stock price."
             logoImage="/osucapital.png"
-          />
-
-          <Card
-            title="oncehuman.market"
-            logoImage="/oncehumanmarket.png"
-            description="An online marketplace for trading and selling rare digital collectibles."
-            mediaItems={["/screenshots/oncehumanmarket1.png", "/screenshots/oncehumanmarket2.png", "/screenshots/oncehumanmarket3.png"]}
-
-          />
-
-          <Card
-            title="MarioKartCentral"
-            subtitle="32,000+ users"
-            logoImage="/mariokartcentral.png"
-            description="A central hub for Mario Kart players to share tips, strategies, and organize tournaments."
-            numberOfUsers="32,000+"
-          />
-
-          <Card
-            title="ForestShield"
-            description="A machine learning model that predicts forest fire risks based on environmental data."
+            mediaItems={[
+              "/screenshots/osucapital1.png",
+              "/screenshots/osucapital2.png",
+              "/screenshots/osucapital3.png",
+              "/screenshots/osucapital4.png",
+            ]}
+            websiteLink="https://osucapital.com"
           />
 
           <Card
             title="Where2Be"
             subtitle="2,000+ users"
             logoImage="/where2be.png"
-            description="A social networking app for finding the best places to hang out based on your interests."
-            numberOfUsers="2,000+"
+            description="A social networking app which scrapes data across Instagram, Facebook, and Discord and parses them into events for students to join, which are recommended based on their interests. Launched at 5 universities."
+            mediaItems={["/screenshots/where2be.png", "/videos/where2be.mp4"]}
+            githubLink="https://github.com/momentevents"
+            websiteLink="https://where2be.app"
+          />
+
+          <Card
+            title="Mario Kart Central"
+            subtitle="32,000+ users"
+            logoImage="/mariokartcentral.png"
+            description="The central hub for the competitive Mario Kart community, which hosts thousands of online tournaments for Mario Kart Wii, Mario Kart Tour, and Mario Kart 8 Deluxe."
             mediaItems={[
-              "/screenshots/where2be.png",
-              "/videos/where2be.mp4",
+              "/screenshots/mariokartcentral1.png",
+              "/screenshots/mariokartcentral2.png",
             ]}
+            githubLink="https://github.com/mariokartcentral"
+            websiteLink="https://mariokartcentral.com"
+          />
+
+          <Card
+            title="Once Human Market"
+            subtitle="40,000+ total views"
+            logoImage="/oncehumanmarket.png"
+            description="An online marketplace for trading items in the video game, Once Human."
+            mediaItems={[
+              "/screenshots/oncehumanmarket1.png",
+              "/screenshots/oncehumanmarket2.png",
+              "/screenshots/oncehumanmarket3.png",
+            ]}
+            githubLink="https://github.com/kyle1373/oncehuman.market"
+            websiteLink="https://oncehuman.market"
           />
 
           <Card
             title="HKN Portal"
+            subtitle="1,000+ members"
             logoImage="/hkn.png"
             description="A portal for managing and organizing HKN events and member activities."
+            mediaItems={["/screenshots/hkn1.png", "/screenshots/hkn2.png"]}
+            githubLink={"https://github.com/hkn-ucsd"}
+            websiteLink="https://hkn.ucsd.edu"
+          />
+
+          <Card
+            title="ForestShield"
+            subtitle="QHacks 2022 3rd Place Winner"
+            description="A machine learning architecture that predicts forest fire risks based on environmental data and displays it on a heatmap for first responders."
+            mediaItems={[
+              "/screenshots/forestshield1.png",
+              "/screenshots/forestshield2.png",
+              "/screenshots/forestshield3.png",
+            ]}
+          />
+
+          <Card
+            title="Audio Synthesizer"
+            description="An audio synthesizer displaying visualizations of wave amplification and attenuation while showing Fourier Transform component representation."
+            githubLink="https://github.com/kyle1373/AudioSynthesizer"
+            mediaItems={["/screenshots/audiosynthesizer.png"]}
           />
 
           <Card
             title="Hard Hack"
             logoImage="/hardhack.png"
-            description="An annual hackathon event focused on solving real-world hardware challenges."
+            description="A hardware hackathon that HKN holds annually in collaboration with IEEE and Triton Neurotech at UC San Diego. This is the landing page for the website, reused annually for thousands of people."
+            websiteLink={"https://hardhack.dev"}
+            githubLink={"https://github.com/HKN-UCSD/hard-hack-2023"}
+            mediaItems={["/screenshots/hardhack.png"]}
           />
         </div>
       </div>

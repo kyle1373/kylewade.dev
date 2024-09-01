@@ -68,7 +68,7 @@ export default function Home() {
                 I'm <span className="font-bold">Kyle</span>, a machine learning
                 researcher and software engineer. I love hiking, skiing, playing
                 the piano, raising dogs, competing in chess, and more. I also do
-                a ton of fullstack development.
+                a ton of fullstack and machine learning development.
               </p>
             </AccordionContent>
           </AccordionItem>

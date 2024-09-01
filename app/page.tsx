@@ -72,27 +72,8 @@ export default function Home() {
               <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning
                 researcher and software engineer. I love hiking, skiing, playing
-                the piano, raising dogs, competing in chess, and more. I do a
-                ton of fullstack development and machine learning. If you're
-                interested in seeing what I do (or hire me), check out my{" "}
-                <Link
-                  href={LINKS.Github}
-                  className="underline text-blue-400 hover:text-blue-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href={LINKS.Resume}
-                  className="underline text-blue-400 hover:text-blue-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  resume
-                </Link>
-                .
+                the piano, raising dogs, competing in chess, and more. I also do a
+                ton of fullstack development.
               </p>
             </AccordionContent>
           </AccordionItem>

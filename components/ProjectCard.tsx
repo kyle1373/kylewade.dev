@@ -1,7 +1,6 @@
 "use client";
 
-// components/ProjectCard.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   FaGithub,
@@ -43,13 +42,13 @@ export default function Card({
 
   const goToPreviousMedia = () => {
     setCurrentMediaIndex((prevIndex) =>
-      prevIndex === 0 ? mediaItems.length - 1 : prevIndex - 1
+      prevIndex === 0 ? 0 : prevIndex - 1
     );
   };
 
   const goToNextMedia = () => {
     setCurrentMediaIndex((prevIndex) =>
-      prevIndex === mediaItems.length - 1 ? 0 : prevIndex + 1
+      prevIndex === mediaItems.length - 1 ? prevIndex : prevIndex + 1
     );
   };
 
@@ -59,6 +58,26 @@ export default function Card({
       closeModal();
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (isModalOpen) {
+        if (event.key === "ArrowLeft") {
+          goToPreviousMedia();
+        } else if (event.key === "ArrowRight") {
+          goToNextMedia();
+        } else if (event.key === "Escape") {
+          closeModal();
+        }
+      }
+    };
+  
+    window.addEventListener("keydown", handleKeyDown);
+  
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen, currentMediaIndex, mediaItems.length]);
 
   const renderMedia = (media) => {
     const isVideo = media.endsWith(".mp4") || media.endsWith(".webm");
@@ -181,31 +200,36 @@ export default function Card({
         >
           <div className="relative w-11/12 sm:w-3/4 lg:w-1/2">
             {renderMedia(mediaItems[currentMediaIndex])}
-            <div className="absolute top-4 right-4 z-40 ">
+            <div className="absolute top-4 right-4 z-40">
               <button
-                className=" text-white p-1 rounded-full bg-gray-800 bg-opacity-50"
+                className="text-white p-1 rounded-full bg-gray-800 bg-opacity-50"
                 onClick={closeModal}
               >
                 <FaTimes size={24} />
               </button>
             </div>
 
-            <div className="absolute inset-y-0 left-4 flex items-center justify-center">
-              <button
-                className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
-                onClick={goToPreviousMedia}
-              >
-                <FaChevronLeft size={30} />
-              </button>
-            </div>
-            <div className="absolute inset-y-0 right-4 flex items-center justify-center">
-              <button
-                className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
-                onClick={goToNextMedia}
-              >
-                <FaChevronRight size={30} />
-              </button>
-            </div>
+            {currentMediaIndex > 0 && (
+              <div className="absolute inset-y-0 left-4 flex items-center justify-center">
+                <button
+                  className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
+                  onClick={goToPreviousMedia}
+                >
+                  <FaChevronLeft size={30} />
+                </button>
+              </div>
+            )}
+
+            {currentMediaIndex < mediaItems.length - 1 && (
+              <div className="absolute inset-y-0 right-4 flex items-center justify-center">
+                <button
+                  className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
+                  onClick={goToNextMedia}
+                >
+                  <FaChevronRight size={30} />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}

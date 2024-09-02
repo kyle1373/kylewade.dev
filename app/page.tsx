@@ -325,7 +325,7 @@ export default function Home() {
             title="HKN Portal"
             subtitle="1,000+ members"
             logoImage="/hkn.png"
-            description="A portal for managing and organizing HKN events and member activities."
+            description="A portal for managing and organizing HKN events and member activities at UC San Diego."
             mediaItems={["/screenshots/hkn1.png", "/screenshots/hkn2.png"]}
             githubLink={"https://github.com/hkn-ucsd"}
             websiteLink="https://hkn.ucsd.edu"
@@ -334,7 +334,7 @@ export default function Home() {
           <Card
             title="ForestShield"
             subtitle="QHacks 2022 3rd Place Winner"
-            description="A machine learning architecture that predicts forest fire risk based on environmental data and displays the data on a heatmap for first responders."
+            description="A machine learning architecture that takes in environmental sensor data and predicts forest fire risk displayed as a heatmap for first responders."
             mediaItems={[
               "/screenshots/forestshield1.png",
               "/screenshots/forestshield2.png",

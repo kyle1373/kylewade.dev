@@ -52,7 +52,7 @@ export default function Home() {
       <div className="h-20">
         <img
           src={
-            "https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=35&center=true&vCenter=true&width=600&height=100&lines=Frontend+Developer;Backend+Developer;Database+Administrator;Machine+Learning+Researcher;Web+Developer;"
+            "https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=35&center=true&vCenter=true&width=600&height=100&lines=Software+Engineer;Frontend+Developer;Backend+Developer;Database+Administrator;Machine+Learning+Researcher;Web+Developer;"
           }
         />
       </div>

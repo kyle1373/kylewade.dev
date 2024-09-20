@@ -67,8 +67,7 @@ export default function Home() {
               <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning
                 researcher and software engineer. I love hiking, skiing, playing
-                the piano, raising dogs, competing in chess, and more. I also do
-                a ton of fullstack and machine learning development.
+                the piano, raising dogs, competing in chess, and more.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -254,7 +253,9 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <h1 className="font-mono font-bold text-xl sm:text-3xl mt-4">Projects</h1>
+        <h1 className="font-mono font-bold text-xl sm:text-3xl mt-4">
+          Projects
+        </h1>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
           <Card
             title="Archiverse"

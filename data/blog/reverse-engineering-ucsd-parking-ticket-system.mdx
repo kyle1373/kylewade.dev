@@ -325,9 +325,9 @@ def find_latest_citations_for_all_devices(region_num=152, max_increment=99999):
 
 Now that we've fully cracked the algorithm, how could we take advantage of this?
 
-Well, what if we created a real time tracker of tickets being issued live on campus?
-
 ## Creating a Real Time Citation Tracker
+
+What if we created a real time tracker which tracks parking tickets being issued live around campus?
 
 The premise is pretty straightforward. Now that we know that citation numbers are predictable, we just need to write a script which constantly checks if a valid ticket exists for the next expected citation number for each device. Once it exists, we pull the data and push it to the database, then move on to the next citation number on that device. This creates a real time system which listens to new tickets being issued all across campus at UCSD.
 

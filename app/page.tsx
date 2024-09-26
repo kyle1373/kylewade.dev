@@ -1,79 +1,75 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaNewspaper } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaNewspaper } from 'react-icons/fa6'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { LINKS } from "@/constants/constants";
-import Link from "next/link";
-import { TbMailFilled } from "react-icons/tb";
-import Card from "@components/ProjectCard";
+} from '@/components/ui/accordion'
+import Link from 'next/link'
+import { TbMailFilled } from 'react-icons/tb'
+import Card from '@/components/ProjectCard'
+import { LINKS } from 'constants/constants'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-8">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex lg:mb-0 mb-20">
-        <div className="fixed left-0 top-0 flex w-full justify-center border-b bg-gradient-to-b pb-6 pt-8 backdrop-blur-2xl border-neutral-800 bg-zinc-800/30 from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:bg-zinc-800/30">
-          <div className="flex gap-8">
-            <Link
-              href={LINKS.Github}
-              className="hover:text-gray-200 text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={30} />
-            </Link>
-            <Link
-              href={LINKS.Linkedin}
-              className="hover:text-gray-200 text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={30} />
-            </Link>
-            <Link
-              href={LINKS.Resume}
-              className="hover:text-gray-200 text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaNewspaper size={30} />
-            </Link>
-            <Link href={LINKS.Email} className="hover:text-gray-200 text-white">
-              <TbMailFilled size={30} />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <h1 className="sm:text-6xl text-4xl font-black font-mono">Kyle Wade</h1>
+      <h1 className=" text-4xl font-black sm:text-6xl">Kyle Wade</h1>
       <div className="h-20">
         <img
           src={
-            "https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=35&center=true&vCenter=true&width=600&height=100&lines=Software+Engineer;Frontend+Developer;Backend+Developer;Database+Administrator;Machine+Learning+Researcher;Web+Developer;"
+            'https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=35&center=true&vCenter=true&width=600&height=100&lines=Software+Engineer;Frontend+Developer;Backend+Developer;Database+Administrator;Machine+Learning+Researcher;Web+Developer;'
           }
         />
       </div>
 
-      <div className="max-w-3xl w-full text-left font-mono">
+      <div className="mb-3 mt-8 flex items-center justify-center gap-4">
+        <Link
+          href={LINKS.Github}
+          className="text-gray-400 hover:text-gray-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub size={28} />
+        </Link>
+        <Link
+          href={LINKS.Linkedin}
+          className="text-gray-400 hover:text-gray-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin size={28} />
+        </Link>
+        <Link
+          href={LINKS.Resume}
+          className="text-gray-400 hover:text-gray-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaNewspaper size={28} />
+        </Link>
+        <Link href={LINKS.Email} className="text-gray-400 hover:text-gray-300">
+          <TbMailFilled size={34} />
+        </Link>
+      </div>
+
+      <div className="w-full max-w-3xl text-left ">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger className="font-mono font-bold text-xl sm:text-3xl">
+            <AccordionTrigger className=" text-xl font-bold sm:text-3xl">
               About Me
             </AccordionTrigger>
             <AccordionContent>
               <p className="text-left sm:text-lg">
-                I'm <span className="font-bold">Kyle</span>, a machine learning
-                researcher and software engineer. I love hiking, skiing, playing
-                the piano, raising dogs, competing in chess, and more.
+                I'm <span className="font-bold">Kyle</span>, a machine learning researcher and
+                software engineer. I love hiking, skiing, playing the piano, raising dogs, competing
+                in chess, and more.
               </p>
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className="font-mono font-bold text-xl sm:text-3xl">
+            <AccordionTrigger className=" text-xl font-bold sm:text-3xl">
               Skills
             </AccordionTrigger>
             <AccordionContent>
@@ -134,7 +130,7 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="font-bold mt-4">Databases</h3>
+                <h3 className="mt-4 font-bold">Databases</h3>
                 <div className="flex flex-wrap gap-2">
                   <img
                     src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
@@ -170,7 +166,7 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="font-bold mt-4">Frameworks</h3>
+                <h3 className="mt-4 font-bold">Frameworks</h3>
                 <div className="flex flex-wrap gap-2">
                   <img
                     src="https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37"
@@ -226,7 +222,7 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="font-bold mt-4">Machine Learning</h3>
+                <h3 className="mt-4 font-bold">Machine Learning</h3>
                 <div className="flex flex-wrap gap-2">
                   <img
                     src="https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue"
@@ -253,10 +249,8 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <h1 className="font-mono font-bold text-xl sm:text-3xl mt-4">
-          Projects
-        </h1>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <h1 className="mt-4  text-xl font-bold sm:text-3xl">Projects</h1>
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
           <Card
             title="Archiverse"
             subtitle="600,000+ visits / month"
@@ -265,9 +259,9 @@ export default function Home() {
             githubLink="https://github.com/kyle1373/archiverse"
             logoImage="/archiverse.png"
             mediaItems={[
-              "/screenshots/archiverse1.png",
-              "/screenshots/archiverse2.png",
-              "/screenshots/archiverse3.png",
+              '/screenshots/archiverse1.png',
+              '/screenshots/archiverse2.png',
+              '/screenshots/archiverse3.png',
             ]}
           />
 
@@ -277,10 +271,10 @@ export default function Home() {
             description="A stock market where traders invest paper currency into osu! player stocks. Everyone starts off with 10,000 coins, and traders rank up by making good bets on who they think is underrated. When a player's osu! performance goes up, so does their stock price."
             logoImage="/osucapital.png"
             mediaItems={[
-              "/screenshots/osucapital1.png",
-              "/screenshots/osucapital2.png",
-              "/screenshots/osucapital3.png",
-              "/screenshots/osucapital4.png",
+              '/screenshots/osucapital1.png',
+              '/screenshots/osucapital2.png',
+              '/screenshots/osucapital3.png',
+              '/screenshots/osucapital4.png',
             ]}
             websiteLink="https://osucapital.com"
           />
@@ -290,7 +284,7 @@ export default function Home() {
             subtitle="2,000+ users"
             logoImage="/where2be.png"
             description="A social networking app which scrapes data across Instagram, Facebook, and Discord and parses them into events for students to join, which are recommended based on their interests. Launched at 5 universities."
-            mediaItems={["/screenshots/where2be.png", "/videos/where2be.mp4"]}
+            mediaItems={['/screenshots/where2be.png', '/videos/where2be.mp4']}
             githubLink="https://github.com/momentevents"
             websiteLink="https://where2be.app"
           />
@@ -301,8 +295,8 @@ export default function Home() {
             logoImage="/mariokartcentral.png"
             description="The central hub for the competitive Mario Kart community, which hosts thousands of online tournaments for Mario Kart Wii, Mario Kart Tour, and Mario Kart 8 Deluxe."
             mediaItems={[
-              "/screenshots/mariokartcentral1.png",
-              "/screenshots/mariokartcentral2.png",
+              '/screenshots/mariokartcentral1.png',
+              '/screenshots/mariokartcentral2.png',
             ]}
             githubLink="https://github.com/mariokartcentral"
             websiteLink="https://mariokartcentral.com"
@@ -314,9 +308,9 @@ export default function Home() {
             logoImage="/oncehumanmarket.png"
             description="An online marketplace for trading items in the video game, Once Human."
             mediaItems={[
-              "/screenshots/oncehumanmarket1.png",
-              "/screenshots/oncehumanmarket2.png",
-              "/screenshots/oncehumanmarket3.png",
+              '/screenshots/oncehumanmarket1.png',
+              '/screenshots/oncehumanmarket2.png',
+              '/screenshots/oncehumanmarket3.png',
             ]}
             githubLink="https://github.com/kyle1373/oncehuman.market"
             websiteLink="https://oncehuman.market"
@@ -327,8 +321,8 @@ export default function Home() {
             subtitle="1,000+ members"
             logoImage="/hkn.png"
             description="A portal for managing and organizing HKN events and member activities at UC San Diego."
-            mediaItems={["/screenshots/hkn1.png", "/screenshots/hkn2.png"]}
-            githubLink={"https://github.com/hkn-ucsd"}
+            mediaItems={['/screenshots/hkn1.png', '/screenshots/hkn2.png']}
+            githubLink={'https://github.com/hkn-ucsd'}
             websiteLink="https://hkn.ucsd.edu"
           />
 
@@ -337,9 +331,9 @@ export default function Home() {
             subtitle="QHacks 2022 3rd Place Winner"
             description="A machine learning architecture that takes in environmental sensor data and predicts forest fire risk displayed as a heatmap for first responders."
             mediaItems={[
-              "/screenshots/forestshield1.png",
-              "/screenshots/forestshield2.png",
-              "/screenshots/forestshield3.png",
+              '/screenshots/forestshield1.png',
+              '/screenshots/forestshield2.png',
+              '/screenshots/forestshield3.png',
             ]}
           />
 
@@ -347,19 +341,19 @@ export default function Home() {
             title="Audio Synthesizer"
             description="An audio synthesizer displaying visualizations of wave amplification and attenuation while showing Fourier Transform component representation."
             githubLink="https://github.com/kyle1373/AudioSynthesizer"
-            mediaItems={["/screenshots/audiosynthesizer.png"]}
+            mediaItems={['/screenshots/audiosynthesizer.png']}
           />
 
           <Card
             title="Hard Hack"
             logoImage="/hardhack.png"
             description="A hardware hackathon that HKN holds annually in collaboration with IEEE and Triton Neurotech at UC San Diego. This is the landing page for the website, reused annually for thousands of people."
-            websiteLink={"https://hardhack.dev"}
-            githubLink={"https://github.com/HKN-UCSD/hard-hack-2023"}
-            mediaItems={["/screenshots/hardhack.png"]}
+            websiteLink={'https://hardhack.dev'}
+            githubLink={'https://github.com/HKN-UCSD/hard-hack-2023'}
+            mediaItems={['/screenshots/hardhack.png']}
           />
         </div>
       </div>
     </main>
-  );
+  )
 }

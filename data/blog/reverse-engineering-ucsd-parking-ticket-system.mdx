@@ -44,7 +44,7 @@ Strange. This citation also shows that it has been paid. I tried this with <b>15
 
 ![UCSD Parking Ticket Validation Error](/static/blog/reverse-engineering-ucsd/homepage_validation_error.png)
 
-This time a different error message appears, which showed that the citation did not exist in their system. This meant that the website does a database lookup on every parking ticket search. Since the smaller parking ticket numbers were valid yet the larger parking ticket numbers were invalid, I was more convinced that some form of auto incrementing was going on. This got me wondering – what happens if we get the largest citation number that is still a valid ticket? Will it be a ticket issued recently?
+This time a different error message appeared, which showed that the citation did not exist in their system. This meant that the website does a database lookup on every parking ticket search. Since the smaller parking ticket numbers were valid yet the larger parking ticket numbers were invalid, I was more convinced that some form of auto incrementing was going on. This got me wondering – what happens if we get the largest citation number that is still a valid ticket? Will it be a ticket issued recently?
 
 ## Implementing a Binary Search to Find Recent Tickets
 

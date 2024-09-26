@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: 'Kyle Wade',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://kylewade.dev',
   siteRepo: 'https://github.com/kyle1373/portfolio',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,

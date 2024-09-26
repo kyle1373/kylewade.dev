@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import {
   FaGithub,
   FaExternalLinkAlt,
@@ -9,7 +9,7 @@ import {
   FaChevronRight,
   FaTimes,
   FaPlay,
-} from "react-icons/fa";
+} from 'react-icons/fa'
 
 export default function Card({
   title,
@@ -21,146 +21,130 @@ export default function Card({
   mediaItems, // This will now handle both images and videos
   numberOfUsers,
 }: {
-  title;
-  subtitle?;
-  description;
-  websiteLink?;
-  githubLink?;
-  logoImage?;
-  mediaItems?; // This will now handle both images and videos
-  numberOfUsers?;
+  title
+  subtitle?
+  description
+  websiteLink?
+  githubLink?
+  logoImage?
+  mediaItems? // This will now handle both images and videos
+  numberOfUsers?
 }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0)
 
   const openModal = (index) => {
-    setCurrentMediaIndex(index);
-    setIsModalOpen(true);
-  };
+    setCurrentMediaIndex(index)
+    setIsModalOpen(true)
+  }
 
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => setIsModalOpen(false)
 
   const goToPreviousMedia = () => {
-    setCurrentMediaIndex((prevIndex) =>
-      prevIndex === 0 ? 0 : prevIndex - 1
-    );
-  };
+    setCurrentMediaIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1))
+  }
 
   const goToNextMedia = () => {
     setCurrentMediaIndex((prevIndex) =>
       prevIndex === mediaItems.length - 1 ? prevIndex : prevIndex + 1
-    );
-  };
+    )
+  }
 
   // Function to close modal if clicked outside the media
   const handleClickOutside = (event) => {
-    if (event.target.id === "modal-background") {
-      closeModal();
+    if (event.target.id === 'modal-background') {
+      closeModal()
     }
-  };
+  }
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (isModalOpen) {
-        if (event.key === "ArrowLeft") {
-          goToPreviousMedia();
-        } else if (event.key === "ArrowRight") {
-          goToNextMedia();
-        } else if (event.key === "Escape") {
-          closeModal();
+        if (event.key === 'ArrowLeft') {
+          goToPreviousMedia()
+        } else if (event.key === 'ArrowRight') {
+          goToNextMedia()
+        } else if (event.key === 'Escape') {
+          closeModal()
         }
       }
-    };
-  
-    window.addEventListener("keydown", handleKeyDown);
-  
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isModalOpen, currentMediaIndex, mediaItems.length]);
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isModalOpen, currentMediaIndex, mediaItems.length])
 
   const renderMedia = (media) => {
-    const isVideo = media.endsWith(".mp4") || media.endsWith(".webm");
+    const isVideo = media.endsWith('.mp4') || media.endsWith('.webm')
     if (isVideo) {
       return (
-        <video
-          controls
-          autoPlay
-          className="w-full h-auto max-h-[90vh] rounded-lg"
-        >
+        <video controls autoPlay className="h-auto max-h-[90vh] w-full rounded-lg">
           <source src={media} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      );
+      )
     } else {
       return (
         <img
           src={media}
           alt={`Media ${currentMediaIndex + 1}`}
-          className="w-full h-auto max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+          className="h-auto max-h-[90vh] w-full max-w-[90vw] rounded-lg object-contain"
         />
-      );
+      )
     }
-  };
+  }
 
   const getThumbnail = (media) => {
-    const isVideo = media.endsWith(".mp4") || media.endsWith(".webm");
+    const isVideo = media.endsWith('.mp4') || media.endsWith('.webm')
     if (isVideo) {
       // Generate the thumbnail path based on the video URL
       const thumbnailPath = media
-        .replace("/videos/", "/thumbnails/")
-        .replace(".mp4", ".png")
-        .replace(".webm", ".png");
+        .replace('/videos/', '/thumbnails/')
+        .replace('.mp4', '.png')
+        .replace('.webm', '.png')
       return (
         <div className="relative h-24 w-24 cursor-pointer">
           <img
             src={thumbnailPath}
             alt={`Thumbnail for ${title}`}
-            className="h-full w-full object-cover rounded-lg"
+            className="h-full w-full rounded-lg object-cover"
             onClick={() => openModal(currentMediaIndex)}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-gray-800 bg-opacity-50 p-2 rounded-full">
-              <FaPlay size={30} className="text-white opacity-80 ml-1" />
+            <div className="rounded-full bg-gray-800 bg-opacity-50 p-2">
+              <FaPlay size={30} className="ml-1 text-white opacity-80" />
             </div>
           </div>
         </div>
-      );
+      )
     } else {
       return (
         <img
           src={media}
           alt={`${title} media ${currentMediaIndex + 1}`}
-          className="h-24 w-24 object-cover rounded-lg cursor-pointer"
+          className="h-24 w-24 cursor-pointer rounded-lg object-cover"
           onClick={() => openModal(currentMediaIndex)}
         />
-      );
+      )
     }
-  };
+  }
 
   return (
-    <div className="bg-zinc-800/30 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="rounded-xl bg-zinc-800/30 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl">
       <div className="flex items-center">
-        {logoImage && (
-          <img
-            src={logoImage}
-            alt={`${title} logo`}
-            className="h-12 w-12 mr-4"
-          />
-        )}
+        {logoImage && <img src={logoImage} alt={`${title} logo`} className="mr-4 h-12 w-12" />}
         <div>
           <h2 className="text-2xl font-bold text-white">{title}</h2>
-          {subtitle && (
-            <h3 className="text-lg font-semibold text-gray-400">{subtitle}</h3>
-          )}
+          {subtitle && <h3 className="text-lg font-semibold text-gray-400">{subtitle}</h3>}
         </div>
       </div>
-      <p className="text-gray-300 mt-4">{description}</p>
-      {numberOfUsers && (
-        <p className="text-sm text-gray-500 mt-2">Users: {numberOfUsers}</p>
-      )}
+      <p className="mt-4 text-gray-300">{description}</p>
+      {numberOfUsers && <p className="mt-2 text-sm text-gray-500">Users: {numberOfUsers}</p>}
       {mediaItems && (
-        <div className="flex space-x-4 mt-4">
+        <div className="mt-4 flex space-x-4">
           {mediaItems.map((media, index) => (
             <div key={index} onClick={() => openModal(index)}>
               {getThumbnail(media)}
@@ -168,7 +152,7 @@ export default function Card({
           ))}
         </div>
       )}
-      <div className="flex space-x-4 mt-6">
+      <div className="mt-6 flex space-x-4">
         {websiteLink && (
           <Link
             href={websiteLink}
@@ -200,9 +184,9 @@ export default function Card({
         >
           <div className="relative w-11/12 sm:w-3/4 lg:w-1/2">
             {renderMedia(mediaItems[currentMediaIndex])}
-            <div className="absolute top-4 right-4 z-40">
+            <div className="absolute right-4 top-4 z-40">
               <button
-                className="text-white p-1 rounded-full bg-gray-800 bg-opacity-50"
+                className="rounded-full bg-gray-800 bg-opacity-50 p-1 text-white"
                 onClick={closeModal}
               >
                 <FaTimes size={24} />
@@ -212,7 +196,7 @@ export default function Card({
             {currentMediaIndex > 0 && (
               <div className="absolute inset-y-0 left-4 flex items-center justify-center">
                 <button
-                  className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
+                  className="rounded-full bg-gray-800 bg-opacity-50 p-2 text-white"
                   onClick={goToPreviousMedia}
                 >
                   <FaChevronLeft size={30} />
@@ -223,7 +207,7 @@ export default function Card({
             {currentMediaIndex < mediaItems.length - 1 && (
               <div className="absolute inset-y-0 right-4 flex items-center justify-center">
                 <button
-                  className="text-white p-2 bg-gray-800 bg-opacity-50 rounded-full"
+                  className="rounded-full bg-gray-800 bg-opacity-50 p-2 text-white"
                   onClick={goToNextMedia}
                 >
                   <FaChevronRight size={30} />
@@ -234,5 +218,5 @@ export default function Card({
         </div>
       )}
     </div>
-  );
+  )
 }

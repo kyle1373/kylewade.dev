@@ -56,9 +56,7 @@ export default function Home() {
       <div className="w-full max-w-3xl text-left ">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger className=" text-xl font-bold sm:text-3xl">
-              About Me
-            </AccordionTrigger>
+            <AccordionTrigger className=" text-xl font-bold sm:text-3xl">About Me</AccordionTrigger>
             <AccordionContent>
               <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning researcher and
@@ -69,9 +67,7 @@ export default function Home() {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className=" text-xl font-bold sm:text-3xl">
-              Skills
-            </AccordionTrigger>
+            <AccordionTrigger className=" text-xl font-bold sm:text-3xl">Skills</AccordionTrigger>
             <AccordionContent>
               <div className="text-left text-lg">
                 <h3 className="font-bold">Languages</h3>

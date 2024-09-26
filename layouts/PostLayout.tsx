@@ -102,7 +102,6 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 {` • `}
                 <Link href={editUrl(filePath)}>View on GitHub</Link>
               </div>
-              
             </div>
             <footer>
               <div className=" divide-gray-700 text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 xl:divide-y">

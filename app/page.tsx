@@ -23,7 +23,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mb-3 mt-8 flex items-center justify-center gap-4">
+      <div className="mb-3 sm:mt-8 flex items-center justify-center gap-4">
         <Link
           href={LINKS.Github}
           className="text-gray-400 hover:text-gray-300"

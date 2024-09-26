@@ -63,11 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const basePath = process.env.BASE_PATH || ''
 
   return (
-    <html
-      lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
-      suppressHydrationWarning
-    >
+    <>
       {process.env.NODE_ENV === 'production' && (
         <Script
           async
@@ -75,20 +71,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           data-website-id="09dca433-66b6-4799-a145-5b4d2e20d307"
         />
       )}
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-gray-950 pl-[calc(100vw-100%)] text-white antialiased">
-        <ThemeProviders>
-          <SectionContainer>
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
-            </SearchProvider>
-            <Footer />
-          </SectionContainer>
-        </ThemeProviders>
-      </body>
-    </html>
+      <html
+        lang={siteMetadata.language}
+        className={`${space_grotesk.variable} scroll-smooth`}
+        suppressHydrationWarning
+      >
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#000" />
+        <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
+        <body className="bg-gray-950 pl-[calc(100vw-100%)] text-white antialiased">
+          <ThemeProviders>
+            <SectionContainer>
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <Header />
+                <main className="mb-auto">{children}</main>
+              </SearchProvider>
+              <Footer />
+            </SectionContainer>
+          </ThemeProviders>
+        </body>
+      </html>
+    </>
   )
 }

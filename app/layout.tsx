@@ -60,8 +60,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const basePath = process.env.BASE_PATH || ''
-
   return (
     <>
       {process.env.NODE_ENV === 'production' && (
@@ -78,7 +76,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
         <body className="bg-gray-950 pl-[calc(100vw-100%)] text-white antialiased">
           <ThemeProviders>
             <SectionContainer>

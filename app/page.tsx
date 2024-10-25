@@ -60,8 +60,7 @@ export default function Home() {
             <AccordionContent>
               <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning researcher and
-                software engineer. I like to build things that solve problems and help people. Below
-                are some of my projects :)
+                software engineer. I like to build and ship things that solve problems and help people.
               </p>
             </AccordionContent>
           </AccordionItem>

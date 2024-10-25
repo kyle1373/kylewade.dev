@@ -23,7 +23,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mb-3 sm:mt-8 flex items-center justify-center gap-4">
+      <div className="mb-3 flex items-center justify-center gap-4 sm:mt-8">
         <Link
           href={LINKS.Github}
           className="text-gray-400 hover:text-gray-300"
@@ -60,8 +60,8 @@ export default function Home() {
             <AccordionContent>
               <p className="text-left sm:text-lg">
                 I'm <span className="font-bold">Kyle</span>, a machine learning researcher and
-                software engineer. I love hiking, skiing, playing the piano, raising dogs, competing
-                in chess, and more.
+                software engineer. I like to build things that solve problems and help people. Below
+                are some of my projects :)
               </p>
             </AccordionContent>
           </AccordionItem>

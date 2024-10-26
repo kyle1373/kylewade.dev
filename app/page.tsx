@@ -65,8 +65,8 @@ export default function Home() {
               </p>
               <br />
               <p className="text-left sm:text-lg">
-                Previously, I worked on impactful projects at{' '}
-                <span className="font-bold text-red-400">Tesla</span>, where I optimized their
+                Previously, I worked at{' '}
+                <span className="font-bold text-red-400">Tesla</span> where I optimized their
                 service engineering pipeline by enhancing server efficiency, developing new web
                 applications, building distributed microservices, and implementing large-scale data
                 synchronization solutions. At{' '}

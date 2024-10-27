@@ -78,7 +78,7 @@ export default function Home() {
                 >
                   Qualcomm
                 </a>
-                . On the side, I love to build apps, websites, and more for thousands of users. Feel
+                . On the side, I love to build apps, websites, and more. Feel
                 free to check out some of my projects below :)
               </p>
             </AccordionContent>

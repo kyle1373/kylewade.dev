@@ -77,8 +77,9 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   Qualcomm
-                </a>{' '}
-                working on various projects.
+                </a>
+                . On the side, I love to build apps, websites, and more for thousands of users. Feel
+                free to check out some of my projects below :)
               </p>
             </AccordionContent>
           </AccordionItem>

@@ -78,7 +78,7 @@ export default function Home() {
                 >
                   Qualcomm
                 </a>{' '}
-                working on various projects and programs.
+                working on various projects.
               </p>
             </AccordionContent>
           </AccordionItem>

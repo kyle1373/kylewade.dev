@@ -59,20 +59,26 @@ export default function Home() {
             <AccordionTrigger className=" text-xl font-bold sm:text-3xl">About Me</AccordionTrigger>
             <AccordionContent>
               <p className="text-left sm:text-lg">
-                I'm <span className="font-bold">Kyle</span>, a machine learning researcher and
-                software engineer. I love to create robust, scalable solutions that solve real-world
-                problems and streamline user experiences.
-              </p>
-              <br />
-              <p className="text-left sm:text-lg">
-                Previously, I worked at{' '}
-                <span className="font-bold text-red-400">Tesla</span> where I optimized their
-                service engineering pipeline by enhancing server efficiency, developing new web
-                applications, building distributed microservices, and implementing large-scale data
-                synchronization solutions. At{' '}
-                <span className="font-bold text-blue-400">Qualcomm</span>, I contributed to
-                advancements in their ARM-based CPU processors, focusing on improved multithreading
-                performance and data throughput to support next-generation 5G technologies.
+                Hey! I'm <span className="font-bold">Kyle</span>, a machine learning researcher and
+                software engineer. Previously, I worked at{' '}
+                <a
+                  className="font-bold text-red-400 hover:underline"
+                  href="https://tesla.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tesla
+                </a>{' '}
+                and{' '}
+                <a
+                  className="font-bold text-blue-400 hover:underline"
+                  href="https://qualcomm.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Qualcomm
+                </a>{' '}
+                working on various projects and programs.
               </p>
             </AccordionContent>
           </AccordionItem>
